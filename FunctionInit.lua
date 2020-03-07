@@ -88,19 +88,20 @@ function InitControls()
   MangAdmin:PrepareScript(ma_scalesliderreset_button         , Locale["tt_ScaleSliderReset"]           , function() ResetScale() end)
 
 
-
   -- Speed Slider
   ma_speedslider:SetOrientation("HORIZONTAL")
   ma_speedslider:SetMinMaxValues(.5, 30)
   ma_speedslider:SetValueStep(0.5)
   ma_speedslider:SetValue(1)
   ma_speedsliderText:SetText("Speed: 1.0")
+
   -- Scale Slider
   ma_scaleslider:SetOrientation("HORIZONTAL")
   ma_scaleslider:SetMinMaxValues(0.1 , 10)
   ma_scaleslider:SetValueStep(0.1)
   ma_scaleslider:SetValue(1)
   ma_scalesliderText:SetText("Scale: 1.0")
+
 
 --[[Char Tab]]
   InitModelFrame()
@@ -139,7 +140,6 @@ function InitControls()
   MangAdmin:PrepareScript(ma_charunpossessbutton             , Locale["tt_charunpossess"]              , function() CharUnPossess() end)
   MangAdmin:PrepareScript(ma_charrecallbutton                , Locale["tt_charrecall"]                 , function() CharRecall() end)
   MangAdmin:PrepareScript(ma_charrepairitemsbutton           , Locale["tt_charrepair"]                 , function() CharRepair() end)
-
 
   LearnLangDropDownInitialize()
   UIDropDownMenu_Initialize(ma_learnlangdropdown , LearnLangDropDownInitialize)
@@ -184,6 +184,7 @@ function InitControls()
   MangAdmin:PrepareScript(ma_showareabutton                  , Locale["tt_ShowAreaButton"]             , function() ShowAreaButton() end)
   MangAdmin:PrepareScript(ma_honoraddbutton                  , Locale["tt_HonorAddButton"]             , function() HonorAddButton() end)
   MangAdmin:PrepareScript(ma_honorupdatebutton               , Locale["tt_HonorUpdateButton"]          , function() HonorUpdateButton() end)
+
 
 --[[NPC Tab]]
   InitModelFrameNPC()
@@ -231,6 +232,7 @@ function InitControls()
   MangAdmin:PrepareScript(ma_npcunfreeze_randombutton        , Locale["tt_NPCUnFreeze_RandomButton"]   , function() NPCUnFreeze_Random() end)
   MangAdmin:PrepareScript(ma_movestackbutton                 , Locale["tt_MoveStackButton"]            , function() ShowMove() end)
 
+
 --[[Gob Tab]]
   MangAdmin:PrepareScript(ma_objgobutton                     , Locale["tt_ObjGo"]                      , function() OBJGo() end)
   MangAdmin:PrepareScript(ma_objaddbutton                    , Locale["tt_ObjAdd"]                     , function() OBJAdd() end)
@@ -259,6 +261,7 @@ function InitControls()
   MangAdmin:PrepareScript(ma_spawnonmovecheck                , ""                                      , function() CheckToggle("spawn") end)
   MangAdmin:PrepareScript(ma_moveonmovecheck                 , ""                                      , function() CheckToggle("move") end)
 
+
 --[[Tele Tab]]
   MangAdmin:PrepareScript(ma_ContScrollBarEntry1             , nil                                     , function() MangAdmin.db.char.selectedCont = "EK_N"; cont=MangAdmin.db.char.selectedCont; TeleScrollUpdate() end)
   MangAdmin:PrepareScript(ma_ContScrollBarEntry2             , nil                                     , function() MangAdmin.db.char.selectedCont = "EK_S"; cont=MangAdmin.db.char.selectedCont; TeleScrollUpdate() end)
@@ -273,9 +276,9 @@ function InitControls()
   MangAdmin:PrepareScript(ma_ContScrollBarEntry11            , nil                                     , function() MangAdmin.db.char.selectedCont = "I_N"; cont=MangAdmin.db.char.selectedCont; TeleScrollUpdate() end)
   MangAdmin:PrepareScript(ma_ContScrollBarEntry12            , nil                                     , function() MangAdmin.db.char.selectedCont = "OT"; cont=MangAdmin.db.char.selectedCont; TeleScrollUpdate() end)
 
+
 --[[Tickets Tab]]
   MangAdmin:PrepareScript(ma_tabbutton_ticket                , Locale["tt_TicketButton"]               , function() ShowTicketTab() end)
-
   MangAdmin:PrepareScript(ma_resetticketsbutton              , "Not working? Click REFRESH!"           , function() ResetTickets() end)
   MangAdmin:PrepareScript(ma_showticketsbutton               , nil                                     , function() RefreshTickets() end)
   MangAdmin:PrepareScript(ma_showonlineticketsbutton         , nil                                     , function() RefreshOnlineTickets() end)
@@ -287,14 +290,15 @@ function InitControls()
   MangAdmin:PrepareScript(ma_goticketbutton                  , nil                                     , function() Ticket("goticket") end)
   MangAdmin:PrepareScript(ma_showbutton                      , nil                                     , function() ShowTickets() end)
 
+
 --[[Misc Tab]]
   MangAdmin:PrepareScript(ma_bgcolorshowbutton               , nil                                     , function() ShowColorPicker("bg") end)
   MangAdmin:PrepareScript(ma_frmcolorshowbutton              , nil                                     , function() ShowColorPicker("frm") end)
   MangAdmin:PrepareScript(ma_btncolorshowbutton              , nil                                     , function() ShowColorPicker("btn") end)
   MangAdmin:PrepareScript(ma_linkifiercolorbutton            , nil                                     , function() ShowColorPicker("linkifier") end)
   MangAdmin:PrepareScript(ma_applystylebutton                , nil                                     , function() ApplyStyleChanges() end)
-  --MangAdmin:PrepareScript(ma_windowismovable                 , nil                                     , function() AllowMovableWindow() end)
   MangAdmin:PrepareScript(ma_changeweatherbutton             , nil                                     , function() ChangeWeather(UIDropDownMenu_GetSelectedValue(ma_weatherdropdown)) end)
+
 
 --[[Server Tab]]
   MangAdmin:PrepareScript(ma_announcebutton                  , Locale["tt_AnnounceButton"]             , function() Announce(ma_announceeditbox:GetText()) end)
@@ -303,7 +307,10 @@ function InitControls()
   MangAdmin:PrepareScript(ma_loadtablebutton                 , nil                                     , function() ReloadTable(UIDropDownMenu_GetSelectedValue(ma_reloadtabledropdown)) end)
   MangAdmin:PrepareScript(ma_loadscriptsbutton               , nil                                     , function() ReloadScripts() end)
 
+
 --[[Log Tab]]
+
+
 --[[Who Tab]]
   MangAdmin:PrepareScript(ma_resetwhobutton                  , nil                                     , function() ResetWho() end)
   MangAdmin:PrepareScript(ma_deletewhobutton                 , nil                                     , function() Who("delete") end)
