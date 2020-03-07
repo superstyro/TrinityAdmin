@@ -280,8 +280,8 @@ function MangAdmin:CreateServerSection()
     }
   })
 
-  RealGraph=Graph:CreateGraphRealtime("ma_netgraph_diff",ma_netgraphframe2,"CENTER","CENTER",0,0,150,150)
-  local z=RealGraph
+  RealGraph = Graph:CreateGraphRealtime("ma_netgraph_diff",ma_netgraphframe2,"CENTER","CENTER",0,0,150,150)
+  local z = RealGraph
   z:SetAutoScale(false)
   z:SetGridSpacing(1.0,10.0)
   z:SetYMax(300)
@@ -289,29 +289,30 @@ function MangAdmin:CreateServerSection()
   z:SetMode("RAW")
   z:SetBarColors({0.2,0.0,0.0,0.4},{0.0,0.0,1.0,1.0})
   local x = CreateFrame("Frame",name,parent)
-  x.frames=0
+  x.frames = 0
   x.NextUpdate=GetTime()
-  local q=0
+  local q = 0
   x:SetScript("OnUpdate",function()
-      q=q+1
+      q = q + 1
       if q > tonumber(ma_delayparam:GetText()) then --20000=approx 5 minutes, 4000= ~1 minute
           MangAdmin:ChatMsg(".server info")
-          q=0
-          local s = ma_difftext:GetText()
-          --MangAdmin:ChatMsg("Diff="..s)
-          local r="100" -- Trinity says anything over 150 is bad
+          q = 0
+          local s = tonumber(ma_difftext:GetText())
+            MangAdmin:ChatMsg("Diff="..s)  --Debugging output
+          local r = 100 --Trinity says anything over 150 is bad
           if s > r then
+
               z:SetBarColors({1.0,0.0,0.0,1.0},{1.0,0.0,0.0,1.0}) -->150, turn red
           else
               z:SetBarColors({0.0,1.0,0.0,1.0},{0.0,1.0,0.0,1.0}) -- otherwise green
           end
           z:AddBar(s)
-          s="0"
+          s = "0"
       end
       if x.NextUpdate>GetTime() then
         return
       end
-      --local down, up, lag = GetNetStats();
+--      local down, up, lag = GetNetStats();
 --      ma_difftext:SetText(""..lag.." ms")
       x.NextUpdate=x.NextUpdate + 1
     end)

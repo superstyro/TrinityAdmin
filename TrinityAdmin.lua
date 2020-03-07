@@ -867,11 +867,16 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         end
       end
     end
-    for diff in string.gmatch(text, Strings["ma_GmatchUpdateDiff"]) do
-        ma_difftext:SetText(diff)
-        catchedSth = true
---        output = MangAdmin.db.account.style.showchat
-        output = MangAdmin.db.account.style.showchat
+--  for diff in string.gmatch(text, Strings["ma_GmatchUpdateDiff"]) do
+--      ma_difftext:SetText(diff)
+--      catchedSth = true
+-- --     output = MangAdmin.db.account.style.showchat
+--      output = MangAdmin.db.account.style.showchat
+--  end
+    for diff in string.gmatch(text, Strings[ma_GmatchUpdateDiffTime]) do --Only want the Diff time value
+      ma_difftext:SetText(diff)
+      catchedSth = true
+      output = MangAdmin.db.account.style.showchat
     end
     -- hook all new tickets
     for name in string.gmatch(text, Strings["ma_GmatchNewTicket"]) do
