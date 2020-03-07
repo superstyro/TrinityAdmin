@@ -72,7 +72,8 @@ function MangAdmin:CreateServerSection()
   g:SetYMax(120)
   g:SetXAxis(-10,0)
   g:SetMode("RAW")
-  g:SetBarColors({0.2,0.0,0.0,0.4},{1.0,0.0,0.0,1.0})
+  g:SetBarColors({0.0,1.0,0.0,1.0},{0.0,1.0,0.0,1.0}) --GREEN
+  --g:SetBarColors({0.2,0.0,0.0,0.4},{1.0,0.0,0.0,1.0}) --RED
   local f = CreateFrame("Frame",name,parent)
   f.frames=0
   f.NextUpdate=GetTime()
@@ -260,7 +261,7 @@ function MangAdmin:CreateServerSection()
     name = "ma_lagmetertext2",
     group = "server",
     parent = ma_midframe,
-    text = "^Update Diff",
+    text = "^Update Diff:",
     setpoint = {
       pos = "TOPLEFT",
       offX = 170,
@@ -275,8 +276,8 @@ function MangAdmin:CreateServerSection()
     text = "",
     setpoint = {
       pos = "TOPLEFT",
-      offX = 250,
-      offY = -170
+      offX = 232, --Original 250
+      offY = -170 --Original -170
     }
   })
 
