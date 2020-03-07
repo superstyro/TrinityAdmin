@@ -6,6 +6,8 @@ TrinityAdmin v2.5 is a general interface add-on which will help staff member ing
 
 #### This new version of TrinityAdmin contains many changes over previous versions.
 - TrinityAdmin v 2.5 supports client versions 3.x and 4.x only.
+    - Master supports 4.3.4
+    - 3.3.5 suports 3.3.5
     - It does not officially support 1.x or 2.x installs.
 - TrinityAdmin supports TrinityCore servers ONLY.
     - It will not work with MaNGOS, Arc, Ascent, Hearthstone, or any other emu.
