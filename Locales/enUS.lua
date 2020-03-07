@@ -60,10 +60,10 @@ function Return_enUS()
   --[[Tooltips]]
     ["ma_IconHint"]                   = "|cffeda55fClick|r to open TrinityAdmin. |cffeda55fShift-Click|r to reload the user interface.",
     ["tt_Default"]                    = "Move your cursor over an element to toggle the tooltip!",
-    ["tt_LanguageButton"]             = "Change the language and reload TrinityAdmin.",
+    ["tt_LanguageButton"]             = "Reload TrinityAdmin.",
   --[[Control Labels]]
     ["ma_LanguageButton"]             = "Change language",
-    ["info_revision"]                 = "|cFF00FF00Trinity Revision:|r ",
+    ["info_revision"]                 = "|cFF00FF00TrinityCore rev:|r ",
     ["info_platform"]                 = "|cFF00FF00Server Platform:|r ",
     ["info_online"]                   = "|cFF00FF00Players Online:|r ",
     ["info_maxonline"]                = "|cFF00FF00Maximum Online:|r ",

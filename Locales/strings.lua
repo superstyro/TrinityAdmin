@@ -24,7 +24,7 @@
 
 function ReturnStrings_enUS()
   return {
-    ["ma_GmatchRevision"] = "TrinityCore rev. (%S*)", --Example String to Parse: TrinityCore rev. 09a3269eaab8 2020-03-02 03:37:24 +0000 (4.3.4 branch) (Unix, Release, Static) 
+    ["ma_GmatchRevision"] = "TrinityCore rev. (%S*)",
     ["ma_GmatchGPS"] = "X: (.*) Y: (.*) Z",
     ["ma_GmatchItem"] = "%|cffffffff%|Hitem:(%d+).*%[(.*)%]%|h%|r",
     ["ma_GmatchQuest"] = ".-(%d+).*%[(.*)%]%|h%|r",
@@ -35,7 +35,8 @@ function ReturnStrings_enUS()
     ["ma_GmatchGameObject"] = "|cffffffff|Hgameobject_entry:(%d+)|h%[(.-)%]|h|r",
     ["ma_GmatchTele"] = "%|cffffffff%|Htele:(.*)%|h%[(.*)%]%|h%|r",
     ["ma_GmatchTeleFound"] = "Locations found are:",
-    ["ma_GmatchUpdateDiff"] = "Update time diff: (.*)",
+--    ["ma_GmatchUpdateDiff"] = "Update time diff: (.*)",
+    ["ma_GmatchUpdateDiff"] = "Update time diff: (%d+)",
     ["ma_GmatchNewTicket"] = "New ticket from(.+)",
     ["ma_GmatchTicketsFull"] = "Ticket Message.-:.-|c(.*)",
     ["ma_GmatchTickets"] = ".+Ticket.-:(.*)Created by.-:|cff00ccff (.*)|r.+Created.-:(.*)Last change.-:(.*)",
