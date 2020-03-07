@@ -104,7 +104,7 @@ function SetSpeed()
     --self:ChatMsg(".modify speed "..value)
     --self:ChatMsg(".modify fly "..value)
     --self:ChatMsg(".modify swim "..value)
-    MangAdmin:ChatMsg(".modify speed "..value)
+    MangAdmin:ChatMsg(".modify speed all"..value)
     MangAdmin:LogAction("Set speed of "..player.." to "..value..".")
   else
     MangAdmin:Print(Locale["selectionerror1"])
